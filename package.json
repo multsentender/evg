@@ -1,0 +1,24 @@
+{
+  "name": "evg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client:install": "npm i --prefix client",
+    "client:update": "npm update --prefix client",
+    "client:start": "npm run start --prefix client",
+    "server:install": "npm i --prefix back",
+    "server:update": "npm update --prefix back",
+    "server:start": "npm run start --prefix back",
+    "server:dev": "npm run server --prefix back",
+    "all:install": "concurrently \"npm run client:install\" \"npm run server:install\"",
+    "all:update": "concurrently \"npm run client:update\" \"npm run server:update\"",
+    "dev": "concurrently \"npm run client:start\" \"npm run server:dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/multsentender/evg.git"
+  },
+  "author": "multsentender",
+  "license": "ISC"
+}
